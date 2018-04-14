@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Build A Blog</title>
+        <style type="text/css">
+            .error {
+                color: red;
+            }
+            .check{
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+            .check p{
+                display:inline;
+             }
+        </style>
+    </head>
+    <body>
+        <h2>
+            <a href="/blog">Main Blog Page</a>
+        </h2>
+        <h2>
+            <a href="/newpost">Add a Blog Entry</a>
+        </h2>
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
