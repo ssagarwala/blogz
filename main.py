@@ -30,21 +30,18 @@ def add_blog():
     title_error = '' 
     body_error = ''
     
-    new_blog = Blog(title,body)
-    db.session.add(new_blog)
-    db.session.commit()  
-   
     if (len(title) ==0):
         title_error = 'Please write a blog title'
-        title=title
         body=body
     
     if (len(body) == 0):
         body_error = 'Please write a blog body'
-        body=body
         title=title
     
     if not title_error and not body_error:        
+        new_blog = Blog(title,body)
+        db.session.add(new_blog)
+        db.session.commit()        
         #return redirect('/blog')
         blog=Blog.query.filter_by(title=title).first()     
         blog_id=blog.id
