@@ -1,0 +1,44 @@
+body {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error {
+    color: red;
+}
+.check{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.check p{
+    display:inline;
+ }
+input.text{
+    width:350px;
+    height:350px;
+}
+.alignleft{
+    float:left;
+}
+.alignright{
+    float:right;
+}
+.alignleft a:link{
+   background-color:grey;
+   color:#fff;
+   padding: 14px 25px;
+   text-align: center;
+}
+.alignright a:link{
+    background-color:grey;
+    color:#fff;
+    padding: 14px 25px;
+    text-align: center;
+ }
+a{
+    text-decoration:none;
+}
+ul{
+    list-style-type: none;
+}

@@ -2,26 +2,19 @@
 <html>
     <head>
         <title>Build A Blog</title>
-        <style type="text/css">
-            .error {
-                color: red;
-            }
-            .check{
-                margin-top:10px;
-                margin-bottom:10px;
-            }
-            .check p{
-                display:inline;
-             }
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
     </head>
     <body>
-        <h2>
+        <div id="links">
+        <h2 class="alignleft">
             <a href="/blog">Main Blog Page</a>
         </h2>
-        <h2>
+        <h2 class="alignright">
             <a href="/newpost">Add a Blog Entry</a>
         </h2>
+        </div>
+        <div style="clear: both;"></div>
+        
         {% block content %}
         {% endblock %}
 
