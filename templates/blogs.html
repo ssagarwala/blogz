@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-                {% if blogs|length == 0 %}
+                {% if listBlogs|length == 0 %}
                       <p>No Blogs yet</p>
                   {% else %}
                       <ul>
-                        {% for blog in blogs %}
+                        {% for blog_tuple in listBlogs %}
                           <li>
-                            <h2><a href="blog?id={{blog.id}}">
-                            {{blog.title}}</a></h2>
-                            <p> {{blog.body}}</p>  
+                            <h2><a href="blog?id={{blog_tuple[0].id}}">
+                            {{blog_tuple[0].title}}</a></h2>
+                            <p> {{blog_tuple[0].body}}</p>  
+                            <p>Written by
+                            <a href="blog?username={{blog_tuple[1]}}">{{blog_tuple[1]}}</a>
+                            </p>
                           </li>
                         {% endfor %}
                       </ul>
                  {% endif %}      
 {% endblock %}
+
+<!--
+  for blog_tuple in list_blogs:
+        print("name is "+blog_tuple[1])
+        print("blog tile is "+ blog_tuple[0].title)
+        print("blog tile is "+ blog_tuple[0].body)
+-->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Build A Blog</title>
+        <title>Blogz</title>
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
     </head>
     <body>
@@ -13,6 +13,27 @@
             <a href="/newpost">Add a Blog Entry</a>
         </h2>
         </div>
+
+        <div>
+            <a href='/logout'>Log Out</a>
+        </div>
+        <div>
+            <a href='/login'>Log In</a>
+        </div>
+        <div>
+            <a href='/'>Home</a>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        <ul>
+        {% for category,message in messages %}
+            <li class="{{category}}">{{message}}</li>
+        {% endfor %}
+        </ul>
+        {% endwith %}
+
+
+        
         <div style="clear: both;"></div>
         
         {% block content %}

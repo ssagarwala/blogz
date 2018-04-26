@@ -3,5 +3,6 @@
 {% block content %}
         <h3>{{blog.title}}</h3>
         <p> {{blog.body}}</p>  
+        <caption>Written by <a href="blog?username={{username}}">{{username}}</a></caption>
          
 {% endblock %}
